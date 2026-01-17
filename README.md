@@ -1,1 +1,79 @@
-# Lab-9-Bi-Directional-search
+# Professional Bi-Directional Search Laboratory
+
+A comprehensive, industry-level implementation of bi-directional search algorithms with advanced visualization, performance benchmarking, and interactive demonstrations.
+
+## Overview
+
+This laboratory provides a complete framework for understanding and implementing bi-directional search algorithms, which simultaneously search from both the start and goal nodes to significantly improve search efficiency over traditional unidirectional approaches.
+
+## Features
+
+- **Core Algorithm Implementation**: Optimized bi-directional search with multiple heuristics
+- **Performance Analytics**: Comprehensive benchmarking and comparison tools
+- **Interactive Visualization**: Real-time search process visualization
+- **Multiple Graph Types**: Support for weighted, unweighted, directed, and undirected graphs
+- **Industry Applications**: Real-world use cases and scenarios
+- **Extensible Architecture**: Plugin-based system for custom heuristics and strategies
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Quick Start
+
+```python
+from bidirectional_search import BiDirectionalSearch, GraphGenerator
+
+# Create a sample graph
+graph = GraphGenerator.create_random_graph(1000, 0.1)
+
+# Initialize bi-directional search
+search = BiDirectionalSearch(graph)
+
+# Find path between nodes
+result = search.find_path(0, 999)
+print(f"Path found: {result.path}")
+print(f"Nodes explored: {result.nodes_explored}")
+print(f"Time taken: {result.time_taken:.4f}s")
+```
+
+## Project Structure
+
+```
+├── bidirectional_search/
+│   ├── __init__.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── search.py          # Core bi-directional search implementation
+│   │   ├── graph.py           # Graph data structures
+│   │   └── heuristics.py      # Heuristic functions
+│   ├── visualization/
+│   │   ├── __init__.py
+│   │   ├── plotter.py         # Static visualization
+│   │   └── dashboard.py       # Interactive dashboard
+│   ├── benchmark/
+│   │   ├── __init__.py
+│   │   ├── performance.py     # Performance testing
+│   │   └── comparison.py      # Algorithm comparison
+│   └── utils/
+│       ├── __init__.py
+│       ├── generators.py      # Graph generators
+│       └── metrics.py         # Performance metrics
+├── tests/
+├── examples/
+├── docs/
+└── requirements.txt
+```
+
+## Documentation
+
+- [Algorithm Theory](docs/theory.md)
+- [API Reference](docs/api.md)
+- [Examples](examples/)
+- [Performance Benchmarks](docs/benchmarks.md)
+
+## License
+
+MIT License
